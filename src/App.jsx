@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import { Button } from 'antd';
+import { Button,message} from 'antd';
 export default class App extends Component {
+    handleclick = ()=>{
+        message.success('click!');
+    }
     render() {
         return (
             <div>
                 app....
-                <Button type="primary">Button</Button>
+                <Button type="primary" onClick={this.handleclick}>Button</Button>
             </div>
         )
     }
